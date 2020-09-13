@@ -5,7 +5,7 @@ import Colors from '../../res/colors';
 
 const CoinsItem = ({coin, onPress}) => {
     const getImageArrow = () => {
-        if (coin.percent_change_1h > 0) {
+        if (coin?.percent_change_1h > 0) {
             return require('../../assets/arrow_up.png');
         } else {
             return require('../../assets/arrow_down.png');

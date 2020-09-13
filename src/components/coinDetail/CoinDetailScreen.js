@@ -20,6 +20,19 @@ const CoinDetailScreen = ({navigation, route}) => {
     const [coin, setCoin] = React.useState(null);
     const [markets, setMarkets] = React.useState([]);
 
+    const getFavorite = async () => {
+        try {
+            const key = `favorite-${coin.id}`;
+            const favString = await Storage.instance.get(key)
+
+            if (favString !== null) {
+                setIsFavorite(true)
+            }
+        } catch (error) {
+            console.log('Error:', error)
+        }
+    }
+    
     React.useEffect(() => {
         const {coin: _coin} = route.params;
         navigation.setOptions({title: _coin.symbol});
@@ -48,19 +61,6 @@ const CoinDetailScreen = ({navigation, route}) => {
             //TODO:
         };
     }, [route]);
-
-    const getFavorite = async () => {
-        try {
-            const key = `favorite-${coin.id}`;
-            const favString = await Storage.instance.get(key)
-
-            if (favString !== null) {
-                setIsFavorite(true)
-            }
-        } catch (error) {
-            console.log('Error:', error)
-        }
-    }
 
     const getSymbolIcon = (name) => {
         if (name) {
