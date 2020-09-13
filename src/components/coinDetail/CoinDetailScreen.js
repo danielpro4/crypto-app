@@ -8,9 +8,9 @@ import {
     SectionList,
     FlatList,
 } from 'react-native';
-import Colors from '../res/colors';
-import Http from '../libs/http';
-import CoinMarketItem from '../components/coinDetail/CoinMarketItem';
+import Colors from '../../res/colors';
+import Http from '../../libs/http';
+import CoinMarketItem from './CoinMarketItem';
 
 const CoinDetailScreen = ({navigation, route}) => {
     const [coin, setCoin] = React.useState(null);

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {createStackNavigator} from '@react-navigation/stack';
-import CoinsScreen from '../../screens/CoinsScreen';
-import CoinDetailScreen from '../../screens/CoinDetailScreen';
+import CoinsScreen from './CoinsScreen';
+import CoinDetailScreen from '../coinDetail/CoinDetailScreen';
 import Colors from '../../res/colors';
 
 const Stack = createStackNavigator();

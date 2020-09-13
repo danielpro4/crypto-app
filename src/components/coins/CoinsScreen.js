@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {View, StyleSheet, FlatList, ActivityIndicator} from 'react-native';
-import Http from '../libs/http';
-import CoinsItem from '../components/coins/CoinsItem';
-import Colors from '../res/colors';
-import CoinSearch from '../components/coins/CoinSearch';
+import Http from '../../libs/http';
+import CoinsItem from './CoinsItem';
+import Colors from '../../res/colors';
+import CoinSearch from './CoinSearch';
 
 const API_URL = 'https://api.coinlore.net/api/tickers/?start=100&limit=100';
 
